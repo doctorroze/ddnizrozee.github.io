@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Benim Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="hero">
+    <img src="hero.jpg" alt="Kapak Görseli">
+  </section>
+
+  <section class="intro">
+    <h1><strong><em>100 TANE 9. SINIF VS 1 TANE 12. SINIF!!!!1!1!!!!11!</em></strong></h1>
+<p><strong>Aşağıdaki forma isim ve sınıf yaz ki seni dövüşe çağıralım B) </strong></p>
+  </section>
+
+  <section class="form-section">
+    <form id="myForm">
+      <label>İsim:
+        <input name="name" required>
+      </label>
+      <label>Sınıf:
+        <input name="class" required>
+      </label>
+      <button type="submit">Kaydet</button>
+    </form>
+    <div id="msg"></div>
+  </section>
+
+  <footer>
+    <p>Bu site test amaçlıdır. Yani kimse sizi 100v1'e çağırmayacak, özür dilerim.</p>
+  </footer>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzpMlrBxWJv1ToObhlMfdb3wn1qbBwXJqkeYS4-RZ0iecSFlS0bjRp_kCQ9_18cW3-b/exec'; // Apps Script linki
+    document.getElementById('myForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      fetch(scriptURL, { method: 'POST', body: fd })
+        .then(() => { document.getElementById('msg').innerText = 'Kaydettim ✅'; e.target.reset(); })
+        .catch(() => { document.getElementById('msg').innerText = 'Bir hata oluştu ❌'; });
+    });
+  </script>
+</body>
+</html>
