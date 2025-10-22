@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Kapak */
+.hero {
+  width: 100%;
+  height: 100vh; /* ekranın tamamını kaplar */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Yazı kısmı */
+.intro {
+  text-align: center;
+  max-width: 600px;
+  padding: 60px 20px;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+/* Form kutusu */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#msg {
+  margin-top: 15px;
+  color: green;
+  font-size: 0.9rem;
+}
+
+/* Alt yazı */
+footer {
+  font-size: 0.7rem;
+  color: #777;
+  padding: 30px 0;
+}
